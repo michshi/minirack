@@ -2,9 +2,12 @@
 module.exports = {
 development: {
  client: 'pg',
- connection: 'postgres://localhost/dbname-dev'
+ connection: 'postgres://localhost/minirack'
 },
-test: {},
+test: {
+  client: 'pg',
+  connection: 'postgres://localhost/minirack'
+},
 production: {
  client: 'pg',
  connection: process.env.DATABASE_URL
